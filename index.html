@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Main page</title>
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet">
+</head>
+
+<body>
+
+   <!-- nav  and  logo   -->
+   <nav class="nav">
+      <div class="container nav-wrapper__main">
+         <div class="nav-main">
+            <div class="nav-right">
+               <div class="logo">
+                  <a href="index.html">
+                     <img src="assets/img/icon/Logo-dars.svg" alt="">
+                  </a>
+               </div>
+            </div>
+            <div class="nav-left">
+               <div class="burger-icon hover-target">
+                  <span class="burger-icon__line burger-icon__line-left"></span>
+                  <span class="burger-icon__line"></span>
+                  <span class="burger-icon__line burger-icon__line-right"></span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="nav-group">
+         <ul class="nav-item">
+            <li>
+               <a href="index.html" class="nav-link ">Главная</a>
+            </li>
+            <li>
+               <a href="about-us.html" class="nav-link">о нас</a>
+            </li>
+            <li>
+               <a href="uslugi.html" class="nav-link">услуги</a>
+            </li>
+            <li>
+               <a href="contacts.html" class="nav-link">цены</a>
+            </li>
+            <li>
+               <a href="contacts.html" class="nav-link">контакты</a>
+            </li>
+         </ul>
+      </div>
+   </nav>
+
+   <!--   section  header  -->
+   <header class="header">
+      <div class="slide-wrapper">
+         <div class="slide yurts-main">
+            <div class="slide-info">
+               <h1 class="slider-title">МЫ ОТКРЫЛИСЬ</h1>
+               <p class="slider-desc">
+                  СТАНЬТЕ ОДНИМ ИЗ ПЕРВЫХ КТО ПОСЕТИТ НАШ ГОРОДОК
+               </p>
+               <a class="js-open-modal slider-btn" data-modal="10" href>Забронировать</a>
+            </div>
+         </div>
+         <div class="slide yurts-main">
+            <div class="slide-info">
+               <h1 class="slider-title">ДОБРО ПОЖАЛОВАТЬ!</h1>
+               <p class="slider-desc">
+                  СТАНЬТЕ ОДНИМ ИЗ ПЕРВЫХ КТО ПОСЕТИТ НАШ ГОРОДОК
+               </p>
+               <a class="js-open-modal slider-btn" data-modal="10" href>Забронировать</a>
+            </div>
+         </div>
+         <div class="slide yurts-main">
+            <div class="slide-info">
+               <h1 class="slider-title">ДОБРО ПОЖАЛОВАТЬ!</h1>
+               <p class="slider-desc">
+                  СТАНЬТЕ ОДНИМ ИЗ ПЕРВЫХ КТО ПОСЕТИТ НАШ ГОРОДОК
+               </p>
+               <a class="js-open-modal slider-btn" data-modal="10" href>Забронировать</a>
+            </div>
+         </div>
+
+         <!--Controlling arrows-->
+         <div class="btn-wrapper">
+            <span class="controls" onclick="prevSlide(-1)" id="left-arrow">
+               <img src="assets/img/icon/left.svg" alt="">
+            </span>
+            <span class="controls" id="right-arrow" onclick="nextSlide(1)">
+               <img src="assets/img/icon/right.svg" alt="">
+            </span>
+         </div>
+         <div id="dots-con">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+         </div>
+      </div>
+      <!--    samo modalnoe  okno dlya contacta    -->
+      <div class="modal" data-modal="10">
+         <div class="modal-wrapper__contact">
+            <h2 class="modal-wrapper__title">Оставить заявку</h2>
+            <svg class="modal__cross js-modal-close" fill="white" xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24">
+               <path
+                  d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z">
+               </path>
+            </svg>
+            <div class="modal-wrapper__items">
+               <div class="main-page__modal">
+                  <form class="contact-form" action="" method="post" role="form">
+                     <input name="name" type="text" placeholder="Имя" required><br>
+                     <input name="e-mail" type="email" placeholder="Почта" required><br>
+                     <input name="phone" type="tel" placeholder="Телефон" required><br>
+                     <input type="text" class="question" placeholder="Ваш вопрос" required><br>
+                     <button class="main-page__modal-btn" type="submit">Отправить</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="overlay js-overlay-modal"></div>
+   </header>
+
+
+   <!--   section  main   -->
+   <main>
+
+      <!-- section  city -->
+      <section class="city">
+         <div class="container">
+            <div class="city-info">
+               <h3 class="city-title">ПОСЕТИТЕ НАШ
+                  ЮРТОЧНЫЙ ГОРОДОК</h3>
+               <p class="city-desc">ЗДЕСЬ БУДЕТ ОПИСАНИЕ ЮРТОЧНОГО ГОРОДКА, Я ПРЕДЛАГАЮ ВЕСЬ ТЕКСТ
+                  СДЕЛАТЬ ИЗ БОЛЬШИХ БУКВ. ЗДЕСЬ МОЖНО РАЗМЕСТИТЬ ДОСТАТОЧНО
+                  ОБЪЕМНЫЙ ТЕКСТ, НО Я ВСЕ РАВНО СЧИТАЮ, ЧТО ОПТИМАЛЬНАЯ ДЛИНА ТЕКСТА,
+                  ДАЖЕ В ОПИСАТЕЛЬНОМ БЛОКЕ, НЕ ДОЛЖНА СОСТАВЛЯТЬ БОЛЕЕ 5-6 СТРОК,
+                  ТАК КАК ТЕРЯЕТСЯ ВОЗМОЖНОСТЬ СХВАТИТЬ СМЫСЛ ТЕКСТА СРАЗУ И
+                  ТЕРЯЕТСЯ МОТИВАЦИЯ ПРОЧИТАТЬ АБЗАЦ ДО КОНЦА</p>
+            </div>
+            <div class="slider-city">
+               <div class="slider__wrapper-city">
+                  <div class="main">
+                     <h3 class="city-title">УЛУЧШЕННЫЙ</h3>
+                     <div class="main-city__img">
+                        <img class="first-img" src="assets/img/rooms.jpg" loading="lazy" alt="#">
+                        <img class="second-img" src="assets/img/room2.jpg" loading="lazy" alt="#">
+                     </div>
+                     <div class="main-city__desc">
+                        <p>
+                           Вариант “улучшенный” представляет собой просторное помещение,
+                           среднюю цену и хороший уровень комфорта Вариант “улучшенный” представляет собой просторное
+                           помещение, среднюю цену и достаточный уровень комфорта
+                        </p>
+                        <div class="main-city__subdesc">
+                           <img src="assets/img/icon/dom.svg" alt="">
+                           <p>
+                              Диаметр: 30 метров
+                           </p>
+                        </div>
+                        <div class="main-city__subdesc">
+                           <img src="assets/img/icon/krovat.svg" alt="">
+                           <p>
+                              В наличии: 2 кровати, журнальный столик, 2 кресла, шкаф
+                           </p>
+                        </div>
+                        <div class="main-city__subdesc">
+                           <img src="assets/img/icon/eda.svg" alt="">
+                           <p>
+                              Дополнительные услуги
+                           </p>
+                        </div>
+                        <div class="main-city__subdesc">
+                           <img src="assets/img/icon/ekology.svg" alt="">
+                           <p>
+                              экологичность размещения
+                           </p>
+                        </div>
+                     </div>
+                     <div class="main-city__price">
+                        45$ / ночь
+                     </div>
+                     <p class="main-city__subprice">
+                        При размещении от 4 и более человек,<br>
+                        цена составляет 40$ / ночь
+                     </p>
+                     <a class="js-open-modal slider-btn" data-modal="10" style="text-align: center;"
+                        href="#">Забронировать 1</a>
+                  </div>
+                  <div class="main">
+                     <h3 class="city-title">УЛУЧШЕННЫЙ 2</h3>
+                     <div class="main-city__img">
+                        <img class="first-img" src="assets/img/rooms.jpg" loading="lazy" alt="#">
+                        <img class="second-img" src="assets/img/room2.jpg" loading="lazy" alt="#">
+                     </div>
+                     <div class="main-city__desc">
+                        <p>
+                           Вариант “улучшенный” представляет собой просторное помещение,
+                           среднюю цену и хороший уровень комфорта Вариант “улучшенный” представляет собой просторное
+                           помещение, среднюю цену и достаточный уровень комфорта
+                        </p>
+                        <div class="main-city__subdesc">
+                           <img src="assets/img/icon/dom.svg" alt="">
+                           <p>
+                              Диаметр: 30 метров
+                           </p>
+                        </div>
+                        <div class="main-city__subdesc">
+                           <img src="assets/img/icon/krovat.svg" alt="">
+                           <p>
+                              В наличии: 2 кровати, журнальный столик, 2 кресла, шкаф
+                           </p>
+                        </div>
+                        <div class="main-city__subdesc">
+                           <img src="assets/img/icon/eda.svg" alt="">
+                           <p>
+                              Дополнительные услуги
+                           </p>
+                        </div>
+                        <div class="main-city__subdesc">
+                           <img src="assets/img/icon/ekology.svg" alt="">
+                           <p>
+                              экологичность размещения
+                           </p>
+                        </div>
+                     </div>
+                     <div class="main-city__price">
+                        45$ / ночь
+                     </div>
+                     <p class="main-city__subprice">
+                        При размещении от 4 и более человек,<br>
+                        цена составляет 40$ / ночь
+                     </p>
+                     <a class="js-open-modal slider-btn" data-modal="10" style="text-align: center;"
+                        href="#">Забронировать 2</a>
+                  </div>
+                  <div class="main">
+                     <h3 class="city-title">УЛУЧШЕННЫЙ 3</h3>
+                     <div class="main-city__img">
+                        <img class="first-img" src="assets/img/rooms.jpg" loading="lazy" alt="#">
+                        <img class="second-img" src="assets/img/room2.jpg" loading="lazy" alt="#">
+                     </div>
+                     <div class="main-city__desc">
+                        <p>
+                           Вариант “улучшенный” представляет собой просторное помещение,
+                           среднюю цену и хороший уровень комфорта Вариант “улучшенный” представляет собой просторное
+                           помещение, среднюю цену и достаточный уровень комфорта
+                        </p>
+                        <div class="main-city__subdesc">
+                           <img src="assets/img/icon/dom.svg" alt="">
+                           <p>
+                              Диаметр: 30 метров
+                           </p>
+                        </div>
+                        <div class="main-city__subdesc">
+                           <img src="assets/img/icon/krovat.svg" alt="">
+                           <p>
+                              В наличии: 2 кровати, журнальный столик, 2 кресла, шкаф
+                           </p>
+                        </div>
+                        <div class="main-city__subdesc">
+                           <img src="assets/img/icon/eda.svg" alt="">
+                           <p>
+                              Дополнительные услуги
+                           </p>
+                        </div>
+                        <div class="main-city__subdesc">
+                           <img src="assets/img/icon/ekology.svg" alt="">
+                           <p>
+                              экологичность размещения
+                           </p>
+                        </div>
+                     </div>
+                     <div class="main-city__price">
+                        45$ / ночь
+                     </div>
+                     <p class="main-city__subprice">
+                        При размещении от 4 и более человек,<br>
+                        цена составляет 40$ / ночь
+                     </p>
+                     <a class="js-open-modal slider-btn" data-modal="10" style="text-align: center;"
+                        href="#">Забронировать 3</a>
+                  </div>
+
+               </div>
+               <div class="city-btns">
+                  <div class="city-btns__item" onclick="plus(-1)">
+                     <img src="assets/img/icon/left.svg" alt="#">
+                  </div>
+                  <div class="city-btns__item" onclick="plus(1)">
+                     <img src="assets/img/icon/right.svg" alt="#">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+      <!-- section preimuwestva -->
+      <section class="benefits">
+         <div class="container">
+            <h3 class="benefits-title">ПРЕИМУЩЕСТВА</h3>
+            <div class="benefits-wrapper">
+               <div class="benefits-item">
+                  <div class="benefits-subitem">
+                     <img class="benefits-subitem__img" src="assets/img/solnechnye-paneli.jpg" alt="#">
+                     <p class="benef-desc">СОЛНЕЧНЫЕ ПАНЕЛИ</p>
+                  </div>
+                  <div class="benefits-subitem">
+                     <img class="benefits-subitem__img" src="assets/img/mytie-ruk.jpg" alt="#">
+                     <p class="benef-desc">ЭКО-ТУАЛЕТЫ </p>
+                  </div>
+                  <div class="benefits-subitem">
+                     <img class="benefits-subitem__img" src="assets/img/musor-1.jpg" alt="#">
+                     <p class="benef-desc">СОРТИРОВКА ОТХОДОВ</p>
+                  </div>
+               </div>
+               <div class="benefits-item">
+                  <div class="benefits-subitem">
+                     <img class="benefits-subitem__img" src="assets/img/povar1.jpg" alt="#">
+                     <p class="benef-desc">ПЕРСОНАЛ</p>
+                  </div>
+                  <div class="benefits-subitem">
+                     <img class="benefits-subitem__img" src="assets/img/about_cinema.jpg" alt="#">
+                     <p class="benef-desc">
+                        КИНОТЕАТР</p>
+                  </div>
+                  <div class="benefits-subitem">
+                     <img class="benefits-subitem__img" src="assets/img/horse2.jpg" alt="#">
+                     <p class="benef-desc">КАТАНИЕ НА ЛОШАДЯХ</p>
+                  </div>
+                  <div class="benefits-subitem">
+                     <img class="benefits-subitem__img" src="assets/img/sauna.jpg" alt="#">
+                     <p class="benef-desc">ЭКО-САУНА</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+      <!-- section  horse  drive  -->
+      <section class="horse">
+         <div class="container">
+            <div class="horse-wrapper">
+               <div class="horse-item__img">
+                  <img src="assets/img/homepage_horse.jpg" alt="#">
+               </div>
+               <div class="horse-item">
+                  <h3 class="city-title">КОННЫЕ ТУРЫ</h3>
+                  <p class="city-desc">Для тех, кто любит верховую езду можно отправиться
+                     в конный тур по Кыргызстану. Как гласит древнее сказание
+                     «лошадь - это крылья человека».</p>
+                  <p>
+                     <a class="slider-btn horse-btn" href="uslugi.html">Открыть</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+
+   <!-- footer -->
+   <footer class="footer">
+      <div class="container">
+         <div class="footer-wrapper">
+            <div class="footer-item">
+               <a href="index.html">
+                  <img class="logo" src="assets/img/icon/Logo-dars.svg" alt="">
+               </a>
+               <div>
+                  <a href="">
+                     <img src="assets/img/icon/tiktok-dark.svg" alt="">
+                  </a>
+                  <a class="insta" href="https://www.instagram.com/ulush_yurts/">
+                     <img src="assets/img/icon/insta-dark.svg" alt="">
+                  </a>
+               </div>
+            </div>
+            <div class="footer-item">
+               <a href="uslugi.html">УCЛУГИ</a>
+               <a href="about-us.html">О НАС</a>
+            </div>
+            <div class="footer-item">
+               <a href="contacts.html">ЦЕНЫ</a>
+               <a href="contacts.html">КОНТАКТЫ</a>
+            </div>
+         </div>
+         <div class="copyright">
+            <div class="copyright-item">
+               <p>Все права защищены.</p>
+            </div>
+            <div class="copyright-item">
+               <p>Все права защищены.</p>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+   <!--   scripts -->
+   <script src="assets/js/app.js"></script>
+</body>
+
+</html>
